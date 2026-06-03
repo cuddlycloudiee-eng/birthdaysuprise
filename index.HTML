@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY HANDSOME BOY❤️</title>
+<style>
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+}
+p, button, body {
+  font-family: 'Times New Roman', serif;
+}
+
+#startScreen h1 { font-family: 'Dancing Script', cursive; }
+#page1 h1 { font-family: Georgia, serif; }
+#photoPage h1, #photo2 h1, #photo3 h1, #photo4 h1, #photo5 h1 { font-family: 'Trebuchet MS', sans-serif; }
+#page2 h1 { font-family: Verdana, sans-serif; }
+#page1 p, #page2 p, #page3 p, #page4 p, #musicPage p, #photoPage p, #photo2 p, #photo3 p, #photo4 p, #photo5 p {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 18px;
+}
+#page3 h1 { font-family: 'Courier New', monospace; }
+#musicPage h1, #page4 h1 { font-family: 'Brush Script MT', cursive; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #ffe4ec, #ffd6e8);
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: fadeInPage 0.8s ease;
+  padding: 20px;
+  position: relative;
+}
+
+.active { display: flex; }
+
+.card {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px rgba(255, 51, 102, 0.25);
+  max-width: 750px;
+  border: 2px solid rgba(255, 105, 180, 0.2);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff3366, #ff6699);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255,51,102,0.3);
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 15px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.heart {
+  position: absolute;
+  font-size: 25px;
+  animation: float 5s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+@keyframes fadeInPage {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+<body>
+
+<div class="heart" style="left:10%;animation-delay:0s;">❤️</div>
+<div class="heart" style="left:30%;animation-delay:1s;">❤️</div>
+<div class="heart" style="left:50%;animation-delay:2s;">❤️</div>
+<div class="heart" style="left:70%;animation-delay:3s;">❤️</div>
+<div class="heart" style="left:90%;animation-delay:4s;">❤️</div>
+
+<div id="startScreen" class="page active">
+  <div class="card">
+    <h1 style="font-size:3rem; color:#ff3366; font-family:'Dancing Script', cursive;">Akshayaa ❤️ Harish</h1>
+    <p style="font-size:18px; margin-top:10px;">A small surprise made with love 💌</p>
+    <button onclick="showPage('page1')" style="font-size:18px;padding:14px 35px;">Click To Open 🎁</button>
+  </div>
+</div>
+
+<div id="page1" class="page">
+  <div class="card">
+    <h1><span style="font-family:'Brush Script MT', cursive; font-size:3.2rem; color:#ff3366; letter-spacing:2px;">Happy Birthday My Love ❤️</span></h1>
+    <img src="pa.jpeg" alt="Birthday Photo">
+    <p>Welcome to your special surprise 🎂</p>
+    <button onclick="showPage('photoPage')">Next ➜</button>
+  </div>
+</div>
+<div id="photoPage" class="page">
+  <div class="card">
+    <h1>Our Memories 📸</h1>
+    <img src="6.jpeg" alt="Photo 1">
+    <button onclick="showPage('photo2')">Next ➜</button>
+  </div>
+</div>
+
+<div id="photo2" class="page">
+  <div class="card">
+    <h1>MY CHLOWW❤️</h1>
+    <img src="chlo.jpeg" alt="Photo 2">
+    <button onclick="showPage('photo3')">Next ➜</button>
+  </div>
+</div>
+
+<div id="photo3" class="page">
+  <div class="card">
+    <h1>MAMAWW❤️</h1>
+    <img src="7.jpeg" alt="Photo 3">
+    <button onclick="showPage('photo4')">Next ➜</button>
+  </div>
+</div>
+
+<div id="photo4" class="page">
+  <div class="card">
+    <h1>FOREVER MINE❤️</h1>
+    <img src="3.jpeg" alt="Photo 4">
+    <button onclick="showPage('photo5')">Next ➜</button>
+  </div>
+</div>
+
+<div id="photo5" class="page">
+  <div class="card">
+    <h1>MY LIFE❤️</h1>
+    <img src="mama.jpeg" alt="Photo 5">
+    <button onclick="showPage('page2')">Next ➜</button>
+  </div>
+</div>
+
+<div id="page2" class="page">
+  <div class="card">
+    <h1>Special Message 💌</h1>
+    <p>You are my happiness, comfort and favorite person ❤️</p>
+    <button onclick="showPage('page3')">Next ➜</button>
+  </div>
+</div>
+
+<div id="page3" class="page">
+  <div class="card">
+    <h1>HAPPY BIRTHDAY MY CUTEST❤️</h1>
+    <p>
+“காதல் வேண்டாம்” என்று நினைத்த என் வாழ்க்கையில்…<br>
+அதையே அழகாக மாற்றியவன் நீ. ❤️<br><br>
+என் இதயம் ஒரு அமைதியான கடல் இருந்தது…<br>
+அதில் அலைகளை எழுப்பிய அழகான காற்று நீ. ✨<br><br>
+நான் விழுந்தாலும் பிடிக்க வரும் கை நீ…<br>
+நான் சிரித்தால் காரணமாக இருக்கும் மனிதன் நீ… 💖<br><br>
+காதலன் என்று மட்டும் இல்லாமல்<br>
+என் வாழ்க்கையின் அழகான பகுதி நீ…<br><br>
+என் நாளை சிரிப்பால் நிரப்பும் காரணம் நீ…<br>
+என் இதயம் நிம்மதி காணும் இடம் நீ. ❤️
+</p>
+    <button onclick="showPage('musicPage')">Music Page 🎵</button>
+  </div>
+</div>
+
+<div id="musicPage" class="page">
+  <div class="card">
+    <h1>Our Song 🎵</h1>
+    <p>Click below to listen to our special song ❤️</p>
+    <a href="https://youtu.be/r3oAMDsC-8Y?si=5xnRPRjf_feD8ekC" target="_blank" style="text-decoration:none;background:#ff3366;color:white;padding:12px 25px;border-radius:30px;display:inline-block;margin-top:15px;">Play Music ▶</a><br><br>
+    <button onclick="showPage('page4')">Next ➜</button>
+  </div>
+</div>
+
+<div id="page4" class="page">
+  <div class="card">
+    <h1>Love You Mama❤️</h1>
+    <p>
+      No words can explain how much you mean to me. 💖<br><br>
+      You are my safe place, my happiness, and my forever person. ✨<br><br>
+      I love you endlessly, today and always. ❤️
+    </p>
+    <button onclick="document.getElementById('secretMsg').style.display='block'">Love You Too? 💌</button><br><br>
+    <p id="secretMsg" style="display:none;color:#ff3366;font-weight:bold;">
+      If you clicked this, I know you love me too ❤️🥹
+    </p><br>
+    <button onclick="showPage('page1')">Back Home 🏠</button>
+  </div>
+</div>
+
+<script>
+function showLoveMessage() {
+  alert("Love you so much mama ❤️ Forever yours, Akshayaa 💌");
+}
+
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  let target = document.getElementById(pageId);
+  if (target) {
+    target.classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
+
