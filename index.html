@@ -243,6 +243,22 @@ Less Than Tomorrow❤️♾️
     <button onclick="showPage('page1')">Back Home 🏠</button>
   </div>
 </div>
+  <script>
+function showLoveMessage() {
+  alert("Love you so much mama ❤️ Forever yours, Akshayaa 💌");
+}
+
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  let target = document.getElementById(pageId);
+  if (target) {
+    target.classList.add('active');
+  }
+}
+</script>
 
 </body>
 </html>
